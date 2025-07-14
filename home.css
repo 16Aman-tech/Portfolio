@@ -10,6 +10,7 @@
 body {
   background-color: #000;
   overflow-x: hidden;
+  color: white;
 }
 
 /* Navigation */
@@ -18,19 +19,19 @@ body {
   flex-wrap: wrap;
   list-style: none;
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
   background: #111;
-  z-index: 1000;
   position: sticky;
-  top: 0rem;
+  top: 0;
+  z-index: 1000;
 }
 
 .navlist li a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: aliceblue;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -98,6 +99,7 @@ body {
 .content {
   color: aliceblue;
   max-width: 700px;
+  text-align: center;
 }
 
 .content span {
@@ -107,37 +109,40 @@ body {
 .content h1 {
   color: red;
   font-size: 2.2rem;
+  margin: 0.5rem 0;
 }
 
 .content p {
   font-size: 1rem;
   line-height: 1.6rem;
-  text-align: justify;
   margin-top: 1rem;
+  text-align: justify;
 }
 
 /* Icons */
 .icons {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
 .icons i {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: transform 0.3s ease;
 }
 
 .icons i:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 
 /* Buttons */
 .button-container {
   margin-top: 1.5rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -175,7 +180,7 @@ body {
 /* Footer */
 footer {
   width: 100%;
-  background: linear-gradient(to bottom, black, rgba(255, 255, 255, 0.278));
+  background: linear-gradient(to bottom, black, rgba(255, 255, 255, 0.1));
   color: rgba(255, 255, 255, 0.8);
   padding: 2rem 1rem;
   text-align: center;
@@ -183,15 +188,15 @@ footer {
 
 footer p {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
-  gap: 1.2rem;
+  margin-top: 1.2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -205,7 +210,21 @@ footer p {
   transform: scale(1.2);
 }
 
-/* Media Query for Small Devices */
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .circle:nth-child(1) {
+    width: 16rem;
+  }
+
+  .circle:nth-child(2) {
+    width: 13rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -217,33 +236,47 @@ footer p {
     padding: 2rem 1rem;
   }
 
-  .circle:nth-child(1) {
-    width: 15rem;
-  }
-
-  .circle:nth-child(2) {
-    width: 12rem;
-  }
-
   .content h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .content p {
     font-size: 0.95rem;
   }
 
-  .navlist {
-    flex-wrap: wrap;
-    gap: 1rem;
+  .icons i {
+    font-size: 1.6rem;
+  }
+
+  .button-container a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .navlist li a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .circle:nth-child(1) {
+    width: 13rem;
+  }
+
+  .circle:nth-child(2) {
+    width: 10rem;
+  }
+
+  .content h1 {
+    font-size: 1.4rem;
+  }
+
+  .content p {
     font-size: 0.9rem;
   }
 
-  .icons {
-    justify-content: center;
-  }
-
   .button-container {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
