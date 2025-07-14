@@ -3,55 +3,260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Aman Sharma</title>
-  <link rel="stylesheet" href="about.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Aman's About Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #000;
+      overflow-x: hidden;
+      color: aliceblue;
+    }
+
+    .navlist {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      height: 12vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: black;
+    }
+
+    .navlist li a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: aliceblue;
+      font-weight: bold;
+    }
+
+    .navlist li a:hover,
+    .navlist li a.active {
+      color: #f41823;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      padding-top: 14vh;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background-image: url('about.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 15px 3px white;
+      margin-bottom: 2rem;
+    }
+
+    .icons {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .icons a {
+      color: white;
+      font-size: 2.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      transform: scale(1.5);
+    }
+
+    .content {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 2rem);
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content h1 {
+      color: #f41823;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content span {
+      color: #f41823;
+    }
+
+    .content p {
+      font-size: 1.05rem;
+      line-height: 1.7rem;
+      text-align: left;
+      margin-bottom: 1rem;
+      color: #e6e6e6;
+    }
+
+    .content p strong {
+      display: inline-block;
+      font-size: 1.3rem;
+      color: #f41823;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #f41823;
+      padding-bottom: 0.2rem;
+    }
+
+    .button-container {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .button-container a,
+    .resume-button {
+      text-decoration: none;
+      border: 2px solid #f41823;
+      border-radius: 1rem;
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+      min-width: 180px;
+      text-align: center;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    #button1 {
+      background-color: #f41823;
+      color: black;
+    }
+
+    #button1:hover {
+      background: transparent;
+      color: #f41823;
+    }
+
+    #button2 {
+      background: transparent;
+      color: #f41823;
+    }
+
+    #button2:hover {
+      background: #f41823;
+      color: black;
+    }
+
+    .resume-button {
+      background: #f41823;
+      color: black;
+    }
+
+    .resume-button:hover {
+      background: black;
+      color: #f41823;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 1rem;
+        text-align: left;
+      }
+
+      .navlist {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 1rem;
+        height: auto;
+        padding: 1rem 0;
+      }
+
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-image {
+        width: 160px;
+        height: 160px;
+      }
+
+      .icons a {
+        font-size: 2rem;
+      }
+
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <!-- <div class="logo">Aman Sharma</div> -->
-    <ul class="nav-links">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">WORK</a></li>
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="#">PROJECT</a></li>
-      <li><a href="#">SERVICE</a></li>
-    </ul>
-  </nav>
+<ul class="navlist">
+  <li><a href="http:/home%20page/home.html">HOME</a></li>
+  <li><a href="#" class="active">ABOUT</a></li>
+  <li><a href="http://127.0.0.1:5500/work%20page/work.html">WORK</a></li>
+  <li><a href="http://127.0.0.1:5500/project/project.html">PROJECT</a></li>
+  <li><a href="#">SERVICE</a></li>
+</ul>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="about-container row-reverse">
-      
-      <!-- Left: Text Content -->
-      <div class="about-content">
-        <h2>Hi! I Am <span>Aman Sharma</span></h2>
-        <h3 class="red-title">Front-End Developer.</h3>
-        <p>Hello! I'm Aman Sharma, a passionate Fulll stack Devloand recent graduate from Maharana Pratap Engineering College. With a solid foundation in computer science and a keen eye for design, I specialize in creating visually appealing and user-friendly web applications.</p>
+<div class="container" data-aos="fade-up">
+  <div class="profile-image"></div>
+  <div class="icons">
+    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/aman__sharma__17/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/aman-sharma-4029b1250" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/16Aman-tech" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://leetcode.com/u/Aman_sharma420/" target="_blank"><i class="fa-solid fa-code"></i></a>
+  </div>
 
-        <!-- Social icons -->
-        <div class="social-icons">
-          <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
+  <div class="content" data-aos="fade-up" data-aos-delay="200">
+    <h2>Hi! I Am <span>Aman Sharma</span></h2>
+    <h1>Front-End Developer</h1>
+    <p>I’m a front-end developer passionate about crafting visually appealing and user-friendly websites. With a strong foundation in computer science and hands-on experience in building projects, I enjoy turning creative ideas into responsive designs.</p>
+    <p><strong>🎓 Education:</strong><br>B.Tech in Computer Science — Maharana Institute of Professional Studies, Kanpur (2026)</p>
+    <p><strong>🛠 Skills:</strong><br>Languages: C, C++, Python, JavaScript<br>Web: HTML, CSS, JS<br>Tools: VS Code, GitHub, MySQL, Power BI</p>
+    <p><strong>✅ Experience:</strong><br>✔ Accenture North America Virtual Experience<br>✔ Deloitte Cybersecurity and Data Analytics Virtual Experiences</p>
+    <p><strong>💼 Projects:</strong><br>🔧 Voice-Activated Virtual Assistant (Python)<br>🌐 Travel & Tour Website<br>🎮 Apple Game (C++)</p>
+    <p><strong>🏆 Achievements:</strong><br>⭐ 5★ in Python, C++, SQL on HackerRank<br>🧠 200+ LeetCode DSA problems<br>📜 Certified in SQL (Geekster), Data Science (IBM)</p>
+    <p><strong>📌 Career Goal:</strong><br>Looking for Front-End Developer or SDE Intern roles to grow, learn, and build impactful software.</p>
+    <p><strong>🎮 Fun Fact:</strong><br>Outside of tech, I enjoy gaming and exploring AI tools.</p>
 
-        <!-- Buttons -->
-        <div class="about-buttons">
-          <a href="#" class="btn">Hire Me</a>
-          <a href="#" class="btn-outline">View Project</a>
-        </div>
-      </div>
-
-      <!-- Right: Image -->
-      <div class="about-image">
-        <img src="about.jpg" alt="Aman Sharma" />
-      </div>
+    <div class="button-container">
+      <a href="mailto:sharma737696@gmail.com" id="button1">Hire Me</a>
+      <a href="https://github.com/16Aman-tech" target="_blank" id="button2">View Project</a>
+      <a href="Aman_Sharma_Resume.pdf" download class="resume-button">Download Resume</a>
     </div>
-  </section>
+  </div>
+</div>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 </body>
 </html>

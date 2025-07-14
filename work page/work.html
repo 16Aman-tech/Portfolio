@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman's Work Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #000;
+      overflow-x: hidden;
+      color: aliceblue;
+    }
+
+    .navlist {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      height: 12vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: black;
+    }
+
+    .navlist li a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: aliceblue;
+      font-weight: bold;
+    }
+
+    .navlist li a:hover,
+    .navlist li a.active {
+      color: #f41823;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      padding-top: 14vh;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .icons {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .icons a {
+      color: white;
+      font-size: 2.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      transform: scale(1.5);
+    }
+
+    .content {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 2rem);
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2.5rem;
+      color: #f41823;
+      margin-bottom: 2.5rem;
+      border-bottom: 3px solid #f41823;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .work-entry {
+      background: linear-gradient(135deg, #1c1c1c, #111);
+      border-left: 6px solid #f41823;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0.7rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .work-entry:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(244, 24, 35, 0.4);
+    }
+
+    .work-entry h3 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .work-entry p {
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.8;
+    }
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      background: #f41823;
+      color: black;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      border: 2px solid #f41823;
+      transition: all 0.3s ease;
+    }
+
+    .resume-button:hover {
+      background: transparent;
+      color: #f41823;
+    }
+
+    @media (max-width: 768px) {
+      .navlist {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<ul class="navlist">
+  <li><a href="http:/home%20page/home.html">HOME</a></li>
+  <li><a href="http://127.0.0.1:5500/about%20page/about.html">ABOUT</a></li>
+  <li><a href="#" class="active">WORK</a></li>
+  <li><a href="http://127.0.0.1:5500/project/project.html">PROJECT</a></li>
+  <li><a href="#">SERVICE</a></li>
+</ul>
+
+<div class="container" data-aos="fade-up">
+  <div class="icons">
+    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/aman__sharma__17/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/aman-sharma-4029b1250" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/16Aman-tech" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://leetcode.com/u/Aman_sharma420/" target="_blank"><i class="fa-solid fa-code"></i></a>
+  </div>
+
+  <div class="content">
+    <h2>Work Experience</h2>
+
+    <div class="work-entry">
+      <h3>Accenture Virtual Internship (Forage)</h3>
+      <p>Completed tasks related to client communication, risk assessment, and cloud transformation, simulating real-world IT consulting experience.</p>
+    </div>
+
+    <div class="work-entry">
+      <h3>Deloitte Virtual Experiences (Forage)</h3>
+      <p>Participated in cybersecurity and data analytics simulations, gaining exposure to enterprise-level decision-making and analytics workflows.</p>
+    </div>
+
+    <div class="work-entry">
+      <h3>Hackathon - Maharana Pratap Engineering College</h3>
+      <p>Developed a smart banking dashboard using Python and Power BI in a 24-hour hackathon challenge. Focused on transaction visualization and analytics.</p>
+    </div>
+
+    <div class="work-entry">
+      <h3>Freelance Web Developer</h3>
+      <p>Designed and built a responsive website for a local tutor using HTML, CSS, and JavaScript to manage bookings and class schedules.</p>
+    </div>
+
+    <a href="Aman_Sharma_Resume.pdf" download class="resume-button">Download Resume</a>
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+</body>
+</html>
