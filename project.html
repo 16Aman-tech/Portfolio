@@ -144,6 +144,38 @@
       background: transparent;
       color: #f41823;
     }
+     /* Footer */
+footer {
+  width: 100%;
+  background: linear-gradient(to bottom, black, rgba(255, 255, 255, 0.278));
+  color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.social-links i {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-links i:hover {
+  transform: scale(1.2);
+}
 
     @media (max-width: 768px) {
       .navlist {
@@ -202,6 +234,19 @@
     <a href="Aman_Sharma_Resume.pdf" download class="resume-button">Download Resume</a>
   </div>
 </div>
+
+  <!-- Footer -->
+  <footer>
+    <svg width="157" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+    <p>Copyright © 2025 Aman Sharma. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/aman__sharma__17/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/aman-sharma-4029b1250" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/16Aman-tech" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://leetcode.com/u/Aman_sharma420/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+    </div>
+  </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
